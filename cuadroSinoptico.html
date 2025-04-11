@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cuadro Sinóptico de Teorías del Aprendizaje</title>
+  <style>
+    /* Estilos generales */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #eef2f3;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    /* Contenedor general de cada teoría */
+    .Contenedor {
+      background: #fff;
+      border: 2px solid #3498db;
+      border-radius: 20px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      overflow-x: auto; /* Permite scroll horizontal en pantallas pequeñas */
+    }
+    /* Contenedor interno para agrupar las 5 secciones en una sola fila */
+    .row {
+      display: flex;
+      flex-wrap: nowrap; /* Evita que se bajen los bloques */
+      justify-content: space-between;
+      align-items: stretch;
+      gap: 15px;
+    }
+    /* Cada caja (bloque) se ubica en la misma línea */
+    .box {
+      background: #f9f9f9;
+      border: 1px solid #8e44ad;
+      border-radius: 20px;
+      padding: 10px 15px;
+      text-align: center;
+      position: relative;
+      max-width: 170px;
+    }
+    /* Caja específica para el nombre de la teoría (más pequeño) */
+    .box.teoria {
+      flex: 0 0 12%;
+      min-width: 90px;
+      background: #3498db;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .box.teoria h2 {
+      margin: 0;
+    }
+    /* Las demás cajas ocuparán más ancho */
+    .box.teoricos,
+    .box.ideas,
+    .box.conceptos,
+    .box.caracteristicas {
+      flex: 0 0 22%;
+      max-width: 18%;
+    }
+    /* Encabezados de cada sección interna */
+    .subtitulo {
+      font-weight: bold;
+      color: #2c3e50;
+      margin-bottom: 5px;
+    }
+    /* Línea divisoria */
+    .divisor {
+      border: none;
+      height: 2px;
+      background: #8e44ad;
+      margin: 5px 0 10px 0;
+    }
+    /* Flechas decorativas: se crea un triángulo (flecha hacia abajo) */
+    .arrow {
+      width: 0;
+      height: 0;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid #8e44ad;
+      margin: 10px auto;
+    }
+    /* Texto de la cita al pie del contenedor */
+    .cita {
+      text-align: right;
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 5px;
+      font-style: italic;
+    }
+    .Conceptos {
+      background: #e8f0fe;
+      border: 1px dashed #00509e;
+      border-radius: 5px;
+      padding: 10px;
+      margin-top: 20px;
+    }
+    .Conceptos h3 {
+      margin-top: 0;
+      color: #00509e;
+    }
+    ul {
+      list-style-type: square;
+      margin-left: 20px;
+    }
+    /* Pie de página para cita general del texto */
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9em;
+      color: #003366;
+    }
+    /* Responsividad: en pantallas pequeñas se mantiene el scroll horizontal */
+    @media (max-width: 768px) {
+      .row {
+        flex-wrap: nowrap;
+      }
+      .box {
+        min-width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Cuadro Sinóptico de Teorías del Aprendizaje</h1>
+  
+  <!-- Bloque para Conductismo -->
+  <div class="Contenedor">
+    <div class="row">
+      <div class="box teoria">
+        <h2>Conductismo</h2>
+      </div>
+      <div class="box teoricos">
+        <h3 class="subtitulo">Teóricos</h3>
+        <hr class="divisor">
+        <p>Rojas, Torrenteras y otros, enfocados en la repetición y el condicionamiento.</p>
+      </div>
+      <div class="box ideas">
+        <h3 class="subtitulo">Ideas Principales</h3>
+        <hr class="divisor">
+        <p>Aprendizaje mediante repetición, refuerzos y castigos; se ignoran procesos internos ("caja negra").</p>
+      </div>
+      <div class="box conceptos">
+        <h3 class="subtitulo">Conceptos</h3>
+        <hr class="divisor">
+        <p><b>Refuerzo:</b> Incrementa la conducta deseada.<br>
+           <b>Caja negra:</b> Aspectos internos no observables.</p>
+      </div>
+      <div class="box caracteristicas">
+        <h3 class="subtitulo">Características</h3>
+        <hr class="divisor">
+        <p>Transmisión de conductas; el docente controla el proceso de aprendizaje.</p>
+      </div>
+    </div>
+    <!-- Flecha decorativa -->
+    <div class="arrow"></div>
+    <p class="cita">(Mesén Mora, 2019, p. 191)</p>
+  </div>
+  
+  <!-- Bloque para Cognitivismo -->
+  <div class="Contenedor">
+    <div class="row">
+      <div class="box teoria">
+        <h2>Cognitivismo</h2>
+      </div>
+      <div class="box teoricos">
+        <h3 class="subtitulo">Teóricos</h3>
+        <hr class="divisor">
+        <p>Delgado, Alvarado, Leiva, entre otros.</p>
+      </div>
+      <div class="box ideas">
+        <h3 class="subtitulo">Ideas Principales</h3>
+        <hr class="divisor">
+        <p>Se centra en los procesos mentales; el estudiante organiza la información y construye conocimiento.</p>
+      </div>
+      <div class="box conceptos">
+        <h3 class="subtitulo">Conceptos</h3>
+        <hr class="divisor">
+        <p><b>Retroalimentación:</b> Corrige y fortalece conexiones.<br>
+           <b>Conocimiento significativo:</b> Integra lo nuevo con lo aprendido.</p>
+      </div>
+      <div class="box caracteristicas">
+        <h3 class="subtitulo">Características</h3>
+        <hr class="divisor">
+        <p>El docente actúa como facilitador; se enfatiza la asimilación y el procesamiento de información.</p>
+      </div>
+    </div>
+    <div class="arrow"></div>
+    <p class="cita">(Mesén Mora, 2019, p. 192)</p>
+  </div>
+
+  <!-- Bloque para Constructivismo -->
+  <div class="Contenedor">
+    <div class="row">
+      <div class="box teoria">
+        <h2>Constructivismo</h2>
+      </div>
+      <div class="box teoricos">
+        <h3 class="subtitulo">Teóricos</h3>
+        <hr class="divisor">
+        <p>Cejudo, Almenara y Craveri.</p>
+      </div>
+      <div class="box ideas">
+        <h3 class="subtitulo">Ideas Principales</h3>
+        <hr class="divisor">
+        <p>El conocimiento se construye a partir de la experiencia y la reflexión.</p>
+      </div>
+      <div class="box conceptos">
+        <h3 class="subtitulo">Conceptos</h3>
+        <hr class="divisor">
+        <p><b>Construcción del conocimiento:</b> Proceso activo de integración y reinterpretación.</p>
+      </div>
+      <div class="box caracteristicas">
+        <h3 class="subtitulo">Características</h3>
+        <hr class="divisor">
+        <p>El profesor guía y el alumno es el protagonista de su aprendizaje.</p>
+      </div>
+    </div>
+    <div class="arrow"></div>
+    <p class="cita">(Mesén Mora, 2019, p. 194)</p>
+  </div>
+
+  <!-- Bloque para Socio-Constructivismo -->
+  <div class="Contenedor">
+    <div class="row">
+      <div class="box teoria">
+        <h2>Socio-Constructivismo</h2>
+      </div>
+      <div class="box teoricos">
+        <h3 class="subtitulo">Teóricos</h3>
+        <hr class="divisor">
+        <p>Vygotsky, Altamirano, Salinas.</p>
+      </div>
+      <div class="box ideas">
+        <h3 class="subtitulo">Ideas Principales</h3>
+        <hr class="divisor">
+        <p>El aprendizaje se enriquece con la interacción social y el trabajo colaborativo.</p>
+      </div>
+      <div class="box conceptos">
+        <h3 class="subtitulo">Conceptos</h3>
+        <hr class="divisor">
+        <p><b>Zona de desarrollo próximo:</b> Espacio donde el alumno puede lograr más con ayuda.</p>
+      </div>
+      <div class="box caracteristicas">
+        <h3 class="subtitulo">Características</h3>
+        <hr class="divisor">
+        <p>Fomenta el uso de TIC, la colaboración e investigación contextualizada.</p>
+      </div>
+    </div>
+    <div class="arrow"></div>
+    <p class="cita">(Mesén Mora, 2019, p. 195)</p>
+  </div>
+
+  <!-- Bloque para Conectivismo -->
+  <div class="Contenedor">
+    <div class="row">
+      <div class="box teoria">
+        <h2>Conectivismo</h2>
+      </div>
+      <div class="box teoricos">
+        <h3 class="subtitulo">Teóricos</h3>
+        <hr class="divisor">
+        <p>Siemens y otros.</p>
+      </div>
+      <div class="box ideas">
+        <h3 class="subtitulo">Ideas Principales</h3>
+        <hr class="divisor">
+        <p>El aprendizaje surge de conexiones en red entre personas y recursos digitales.</p>
+      </div>
+      <div class="box conceptos">
+        <h3 class="subtitulo">Conceptos</h3>
+        <hr class="divisor">
+        <p><b>TIC:</b> Herramientas tecnológicas que facilitan el acceso al conocimiento.</p>
+      </div>
+      <div class="box caracteristicas">
+        <h3 class="subtitulo">Características</h3>
+        <hr class="divisor">
+        <p>Flexible, se adapta a cambios tecnológicos y promueve el aprendizaje autónomo.</p>
+      </div>
+    </div>
+    <div class="arrow"></div>
+    <p class="cita">(Mesén Mora, 2019, p. 198)</p>
+  </div>
+  <div class="Conceptos">
+    <h3>Conceptos Clave</h3>
+    <ul>
+      <li><strong>Refuerzo:</strong> Estímulo que aumenta la conducta deseada.</li>
+      <li><strong>Caja negra:</strong> Elementos internos no observables en el proceso de aprendizaje.</li>
+      <li><strong>Retroalimentación:</strong> Información que guía y mejora el aprendizaje.</li>
+      <li><strong>Conocimiento significativo:</strong> Integración y asimilación de la nueva información con experiencias previas.</li>
+      <li><strong>Construcción del conocimiento:</strong> Proceso activo donde el alumno interpreta y genera significado.</li>
+      <li><strong>Zona de desarrollo próximo:</strong> Espacio entre lo que el estudiante puede hacer solo y con ayuda.</li>
+      <li><strong>TIC:</strong> Herramientas tecnológicas utilizadas para facilitar el aprendizaje.</li>
+      <li><strong>Aprendizaje colaborativo:</strong> Proceso donde se construye el conocimiento en grupo.</li>
+      <li><strong>Mediación:</strong> Rol del docente facilitador en la instrucción.</li>
+      <li><strong>Transposición pedagógica:</strong> Adaptación del conocimiento para su adecuada enseñanza (Mesén Mora, 2019).</li>
+    </ul>
+  </div>
+
+  <footer>
+    <p>Cita: Mesén Mora, L. D. (2019). <em>Teorías de aprendizaje y su relación en la educación ambiental costarricense</em>. Revista Ensayos Pedagógicos, 14(1), 187-202.</p>
+  </footer>
+</body>
+</html>
